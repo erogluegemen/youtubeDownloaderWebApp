@@ -1,19 +1,19 @@
-################### KÜTÜPHANELER ###################
+################### LIBRARIES ###################
 import streamlit as st
 from pytube import YouTube
 import time
 from pathlib import Path
 import datetime
 
-################### SAYFA AYARLARI ###################
+################### PAGE SETTINGS ###################
 st.set_page_config(
   page_title = 'Youtube Video Downloader',
   page_icon = '✅',
   layout="wide"
  )
 
-################### İNDİRME SAYFASI ###################
-try: # Enter your url placeholderı url formatında olmadığı için regex hata veriyordu. Önlemek için try except bloğuna aldım.
+################### DOWNLOAD PAGE ###################
+try: # To prevent placeholder error cause of none url type placeholder.
     st.markdown("<h1 style='text-align:center;'>You<font color='red'>tube</font> Video <font color='black'>Downloader</font></h1>", unsafe_allow_html=True)
     get_link = st.text_input("URL:", "https://www.youtube.com/watch?v=")
 
